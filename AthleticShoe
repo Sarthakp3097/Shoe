@@ -1,0 +1,29 @@
+public class AthleticShoe extends Shoe {
+    private String color;
+
+    public AthleticShoe(String brand, double price, String color) {
+        super(brand, price);
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "AthleticShoe{" +
+                "brand='" + getBrand() + '\'' +
+                ", price=" + getPrice() +
+                ", color='" + color + '\'' +
+                '}';
+    }
+
+    public void printDetails() {
+        System.out.println("This is an athletic shoe.");
+    }
+}
