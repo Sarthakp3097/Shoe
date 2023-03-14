@@ -1,0 +1,30 @@
+public class DressShoe extends Shoe {
+    private String material;
+
+    public DressShoe(String brand, double price, String material) {
+        super(brand, price);
+        this.material = material;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    @Override
+    public String toString() {
+        return "DressShoe{" +
+                "brand='" + getBrand() + '\'' +
+                ", price=" + getPrice() +
+                ", material='" + material + '\'' +
+                '}';
+    }
+
+
+    public void printDetails() {
+        System.out.println("This is a dress shoe.");
+    }
+}
