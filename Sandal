@@ -1,0 +1,25 @@
+public class Sandal extends Shoe {
+    private boolean hasStraps;
+
+    public Sandal(String brand, double price, boolean hasStraps) {
+        super(brand, price);
+        this.hasStraps = hasStraps;
+    }
+
+    public boolean isHasStraps() {
+        return hasStraps;
+    }
+
+    public void setHasStraps(boolean hasStraps) {
+        this.hasStraps = hasStraps;
+    }
+
+    @Override
+    public String toString() {
+        return "Sandal{" +
+                "brand='" + getBrand() + '\'' +
+                ", price=" + getPrice() +
+                ", hasStraps=" + hasStraps +
+                '}';
+    }
+}
