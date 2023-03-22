@@ -22,4 +22,7 @@ public class Sandal extends Shoe {
                 ", hasStraps=" + hasStraps +
                 '}';
     }
+    public void printDetails() {
+        System.out.println("This is a sandal.");
+    }
 }
