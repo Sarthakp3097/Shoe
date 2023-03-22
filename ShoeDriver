@@ -1,4 +1,4 @@
-//In this program, we create an ArrayList of Shoe objects, which holds references to objects of the subclasses. We add four objects to the ArrayList: one object of the Shoe class, two objects of the AthleticShoe class, and one object of the DressShoe class.
+//In this program, we create an ArrayList of Shoe objects, which holds references to objects of the subclasses. We add four objects to the ArrayList: one object of the Shoe class, one objects of the AthleticShoe class, and one object of the DressShoe class, one object of Sandal
 //
 //We then use two for-each loops to iterate through the ArrayList. In the first loop, we display each object using its toString method and increase the price of all shoes by $10. In the second loop, we use an if-else statement to check the type of the object and call a method that has been overridden in the corresponding subclass. We also call the printDetails method on the subclass objects to display additional information about the shoes.
 //
@@ -13,10 +13,11 @@ public class ShoeDriver {
         ArrayList<Shoe> shoes = new ArrayList<>();
 
         shoes.add(new Shoe("Generic Brand", 50));
-        shoes.add(new AthleticShoe("Nike", 100, "Running"));
-        shoes.add(new AthleticShoe("Adidas", 80, "Basketball"));
+        shoes.add(new AthleticShoe("Nike", 100, "Black"));
+        shoes.add(new AthleticShoe("Adidas", 80, "Blue"));
         shoes.add(new DressShoe("Jimmy Choo", 800, "Satin"));
         shoes.add(new DressShoe("Hermes", 1125, "Leather"));
+        shoes.add(new Sandal("Birkenstock", 110,  true));
 
 
         for (Shoe shoe : shoes) {
@@ -32,6 +33,10 @@ public class ShoeDriver {
                 ((AthleticShoe) shoe).printDetails();
             } else if (shoe instanceof DressShoe) {
                 ((DressShoe) shoe).printDetails();
+            } else if (shoe instanceof Shoe){
+                ((Shoe) shoe).printDetails();
+            }else if (shoe instanceof Sandal){
+                ((Sandal) shoe).printDetails();
             }
             System.out.println();
         }
